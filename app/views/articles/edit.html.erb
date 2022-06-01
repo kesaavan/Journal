@@ -1,0 +1,18 @@
+
+
+<%= form_with model: @book, url: "/articles/update/#{@book.id}" do |form| %>
+	<div>
+		<%= form.label :name %> <br>
+		<%= form.text_field :name %>
+	</div>
+
+	<div>
+		<%= form.label :description %> <br>
+		<%= form.text_field :description %>
+	</div>
+
+	<div>
+		<%= form.submit "update" %>
+	</div>
+
+	<% end %>

@@ -1,0 +1,14 @@
+<center> <h1> List of Articles</h1>  </center>
+
+<% @books.each do |book| %>
+	<table width = 350>
+		<tr>
+			<td><h2 style="color:orange;"><%= book.name %> </h2> </td>
+			<td><h2> <i> <a href = "/articles/<%= book.id %>" >Show </a> </i> </h2> </td>
+			<td><h2> <i> <a href = "/articles/<%= book.id %>/edit" >Edit </a> </i> </h2> </td>
+			<td><h2> <i> <a href = "/articles/<%= book.id %>/delete" >delete </a> </i> </h2> </td>
+		</tr>
+	</table>
+<% end %>
+
+<h2 style="color:orange;"> <a href = "/articles/new" > New Book </a></h2>
